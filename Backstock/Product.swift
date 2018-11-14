@@ -12,7 +12,7 @@ import CoreData
 @objc(Product)
 class Product: NSManagedObject {
     
-    func setupProperties(image: NSData, productName: String, barCode: String, quantity: Int16) {
+    func setupProperties(image: Data, productName: String, barCode: String, quantity: Int16) {
         self.image = image
         self.productName = productName
         self.barCode = barCode
