@@ -17,6 +17,5 @@ class Product: NSManagedObject {
         self.productName = productName
         self.barCode = barCode
         self.quantity = quantity
-        
     }
 }

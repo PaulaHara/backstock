@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		DA613374219BD4B9009525E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613373219BD4B9009525E3 /* AppDelegate.swift */; };
-		DA613376219BD4B9009525E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613375219BD4B9009525E3 /* ViewController.swift */; };
 		DA613379219BD4B9009525E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA613377219BD4B9009525E3 /* Main.storyboard */; };
 		DA61337C219BD4B9009525E3 /* Backstock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA61337A219BD4B9009525E3 /* Backstock.xcdatamodeld */; };
 		DA61337E219BD4D3009525E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA61337D219BD4D3009525E3 /* Assets.xcassets */; };
 		DA613381219BD4D3009525E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA61337F219BD4D3009525E3 /* LaunchScreen.storyboard */; };
 		DA613389219BD9FD009525E3 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613388219BD9FC009525E3 /* ProductTableViewController.swift */; };
 		DA61338B219BDEE1009525E3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61338A219BDEE1009525E3 /* Product.swift */; };
+		DAEB080C219D119C00F768E9 /* red_donut.png in Resources */ = {isa = PBXBuildFile; fileRef = DAEB080A219D119B00F768E9 /* red_donut.png */; };
+		DAEB080D219D119C00F768E9 /* pink_donut.png in Resources */ = {isa = PBXBuildFile; fileRef = DAEB080B219D119B00F768E9 /* pink_donut.png */; };
+		DAF1300C219CDD180057F148 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */; };
+		DAF1300E219CDFE90057F148 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1300D219CDFE90057F148 /* AddProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA613370219BD4B9009525E3 /* Backstock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backstock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA613373219BD4B9009525E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA613375219BD4B9009525E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA613378219BD4B9009525E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA61337B219BD4B9009525E3 /* Backstock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Backstock.xcdatamodel; sourceTree = "<group>"; };
 		DA61337D219BD4D3009525E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +30,10 @@
 		DA613382219BD4D3009525E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA613388219BD9FC009525E3 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		DA61338A219BDEE1009525E3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DAEB080A219D119B00F768E9 /* red_donut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_donut.png; sourceTree = "<group>"; };
+		DAEB080B219D119B00F768E9 /* pink_donut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_donut.png; sourceTree = "<group>"; };
+		DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		DAF1300D219CDFE90057F148 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				DA613373219BD4B9009525E3 /* AppDelegate.swift */,
-				DA613375219BD4B9009525E3 /* ViewController.swift */,
 				DA613377219BD4B9009525E3 /* Main.storyboard */,
 				DA61337D219BD4D3009525E3 /* Assets.xcassets */,
 				DA61337F219BD4D3009525E3 /* LaunchScreen.storyboard */,
@@ -69,6 +74,10 @@
 				DA61337A219BD4B9009525E3 /* Backstock.xcdatamodeld */,
 				DA613388219BD9FC009525E3 /* ProductTableViewController.swift */,
 				DA61338A219BDEE1009525E3 /* Product.swift */,
+				DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */,
+				DAF1300D219CDFE90057F148 /* AddProductViewController.swift */,
+				DAEB080B219D119B00F768E9 /* pink_donut.png */,
+				DAEB080A219D119B00F768E9 /* red_donut.png */,
 			);
 			path = Backstock;
 			sourceTree = "<group>";
@@ -133,6 +142,8 @@
 			files = (
 				DA613381219BD4D3009525E3 /* LaunchScreen.storyboard in Resources */,
 				DA61337E219BD4D3009525E3 /* Assets.xcassets in Resources */,
+				DAEB080C219D119C00F768E9 /* red_donut.png in Resources */,
+				DAEB080D219D119C00F768E9 /* pink_donut.png in Resources */,
 				DA613379219BD4B9009525E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA61337C219BD4B9009525E3 /* Backstock.xcdatamodeld in Sources */,
-				DA613376219BD4B9009525E3 /* ViewController.swift in Sources */,
+				DAF1300E219CDFE90057F148 /* AddProductViewController.swift in Sources */,
 				DA61338B219BDEE1009525E3 /* Product.swift in Sources */,
 				DA613389219BD9FD009525E3 /* ProductTableViewController.swift in Sources */,
 				DA613374219BD4B9009525E3 /* AppDelegate.swift in Sources */,
+				DAF1300C219CDD180057F148 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
