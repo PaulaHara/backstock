@@ -9,12 +9,25 @@
 import UIKit
 import CoreData
 
-class ProductTableViewController: UIViewController {
+class ProductTableViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var productTableView: UITableView!
     
     var managedObjectContext: NSManagedObjectContext!
     
     var emojis = [Product]()
+    
+    func setupEmojis() {
+        let emoji = Product(context: managedObjectContext)
+        let producImage = UIImage(named: "cesar.jpg")!
+        let imageData = producImage.pngData()
+        
+        emoji.setupProperties(image: imageData!, productName: "Produto Test", barCode: "1234245234", quantity: 10)
+        
+        let emoji2 = Product(context: managedObjectContext)
+        emoji2.setupProperties(image: imageData!, productName: "Raoisinha", barCode: "78688567474", quantity: 20)
+        
+        saveContext()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +42,50 @@ class ProductTableViewController: UIViewController {
         
         productTableView.setEditing(editing, animated: animated)
     }
-}
-
-extension ProductTableViewController: UITableViewDelegate {
     
+    // MARK: Core Data
+    fileprivate func loadAllEmojis() {
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do {
+            emojis = try managedObjectContext.fetch(fetchRequest)
+            productTableView.reloadData()
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    fileprivate func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    fileprivate func delete(emoji: Product) {
+        managedObjectContext.delete(emoji)
+        saveContext()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addProduct" {
+            if let destination = segue.destination as? AddProductViewController {
+                destination.delegate = self
+                destination.managedObjectContext = self.managedObjectContext
+            }
+        }
+        else if segue.identifier == "editProduct" {
+            if let destination = segue.destination as? AddProductViewController {
+                destination.delegate = self
+                destination.managedObjectContext = self.managedObjectContext
+                
+                if let indexPath = productTableView.indexPathForSelectedRow {
+                    destination.emoji = emojis[indexPath.row]
+                }
+            }
+        }
+    }
 }
 
 extension ProductTableViewController: UITableViewDataSource {
@@ -52,10 +105,10 @@ extension ProductTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath) as! EmojiTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
         
         let emoji = emojis[indexPath.row]
-        cell.configCell(with: emoji)
+        cell.update(with: emoji)
         cell.showsReorderControl = true
         
         return cell
@@ -67,14 +120,10 @@ extension ProductTableViewController: UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
+}
+extension ProductTableViewController: AddProductViewControllerDelegate {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "emojiDetail" {
-            if let emojiDescr = (sender as? UIButton)?.currentTitle {
-                if let cvc = segue.destination as? EmojiDetailViewController {
-                    cvc.emojiDetail = emojiDescr
-                }
-            }
-        }
+    func addEmoji(_ emoji: Product) {
+        saveContext()
     }
 }

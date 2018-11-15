@@ -15,6 +15,10 @@
 		DA613381219BD4D3009525E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA61337F219BD4D3009525E3 /* LaunchScreen.storyboard */; };
 		DA613389219BD9FD009525E3 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613388219BD9FC009525E3 /* ProductTableViewController.swift */; };
 		DA61338B219BDEE1009525E3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61338A219BDEE1009525E3 /* Product.swift */; };
+		DAF1300C219CDD180057F148 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */; };
+		DAF1300E219CDFE90057F148 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1300D219CDFE90057F148 /* AddProductViewController.swift */; };
+		DAF13011219CE91B0057F148 /* pedigree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DAF1300F219CE91B0057F148 /* pedigree.jpeg */; };
+		DAF13012219CE91B0057F148 /* cesar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DAF13010219CE91B0057F148 /* cesar.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		DA613382219BD4D3009525E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA613388219BD9FC009525E3 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		DA61338A219BDEE1009525E3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		DAF1300D219CDFE90057F148 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		DAF1300F219CE91B0057F148 /* pedigree.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pedigree.jpeg; path = ../../../../Downloads/pedigree.jpeg; sourceTree = "<group>"; };
+		DAF13010219CE91B0057F148 /* cesar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cesar.jpeg; path = ../../../../Downloads/cesar.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				DA61337A219BD4B9009525E3 /* Backstock.xcdatamodeld */,
 				DA613388219BD9FC009525E3 /* ProductTableViewController.swift */,
 				DA61338A219BDEE1009525E3 /* Product.swift */,
+				DAF1300B219CDD180057F148 /* ProductTableViewCell.swift */,
+				DAF1300D219CDFE90057F148 /* AddProductViewController.swift */,
+				DAF13010219CE91B0057F148 /* cesar.jpeg */,
+				DAF1300F219CE91B0057F148 /* pedigree.jpeg */,
 			);
 			path = Backstock;
 			sourceTree = "<group>";
@@ -133,6 +145,8 @@
 			files = (
 				DA613381219BD4D3009525E3 /* LaunchScreen.storyboard in Resources */,
 				DA61337E219BD4D3009525E3 /* Assets.xcassets in Resources */,
+				DAF13011219CE91B0057F148 /* pedigree.jpeg in Resources */,
+				DAF13012219CE91B0057F148 /* cesar.jpeg in Resources */,
 				DA613379219BD4B9009525E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA61337C219BD4B9009525E3 /* Backstock.xcdatamodeld in Sources */,
+				DAF1300E219CDFE90057F148 /* AddProductViewController.swift in Sources */,
 				DA613376219BD4B9009525E3 /* ViewController.swift in Sources */,
 				DA61338B219BDEE1009525E3 /* Product.swift in Sources */,
 				DA613389219BD9FD009525E3 /* ProductTableViewController.swift in Sources */,
 				DA613374219BD4B9009525E3 /* AppDelegate.swift in Sources */,
+				DAF1300C219CDD180057F148 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
